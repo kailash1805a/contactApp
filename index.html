@@ -10,20 +10,46 @@
 
 <body>
     <div class="container">
-        <h1>Contact List...</h1>
+        <h1>Contact Application</h1>
+        <hr>
         <div class="row">
-            <div class="col-md-2" id="side-list">
-                
+            <div class="col-md-3">
+                <div>
+                    <input class="form-control" type="text" id="contact-search" placeholder="Search contact...">
+                    <br>
+                </div>
+                <div class="col-md-12" id="sideList">
+                </div>
             </div>
-            <div class="col-md-10">
-                <div id="contact-details">
-
+            <div class="col-md-9">
+                <div id="sideDetails" class="col-md-12">
+                    <div class="profile-container"><img id="contactPicture" class="img-circle float-left"><h1 id="contactName"></h1></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <b>Email:</b><br>
+                            <span id="email" ></span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Address: </b><br>
+                            <span id="contactLocation"></span><span class="float-right">Home</span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Phone: </b><br>
+                            <span id="contactPhone"></span><span class="float-right">Cell</span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Other: </b><br>
+                            <span id="contactNat"></span><span class="float-right">NAT</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+
     </div>
 </body>
-    <script src="config/configure.js"></script>
-    <script src="master/MasterContact.js"></script>
-    <script src="contact/contactlist.js"></script>
+<script src="config/configure.js"></script>
+<script src="master/MasterContact.js"></script>
+<script src="contact/contactlist.js"></script>
+
 </html>

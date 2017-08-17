@@ -2,10 +2,7 @@
  * Author: Kailash kumar
  */
 
-/**
- * create configuration class object
- */
-var config = new Config();
+var objConfig = new Config();
 
 var MasterContact = function () {
     this.list = [];
@@ -18,10 +15,10 @@ MasterContact.prototype.getList = function (callback) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            this.list = JSON.parse(this.responseText);
-            callback(this.list);
+            localStorage.setItem('contacts', this.responseText);
+            callback(JSON.parse(this.responseText));
         }
     };
-    xhttp.open("GET", config.BASE_URL + "?results=10", true);
+    xhttp.open("GET", objConfig.BASE_URL + "?results=10", true);
     xhttp.send();
 }
